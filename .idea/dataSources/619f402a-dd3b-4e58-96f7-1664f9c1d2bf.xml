@@ -831,37 +831,52 @@
     <table id="211" parent="6" name="orders_commodity">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="212" parent="6" name="user">
+    <table id="212" parent="6" name="permission">
       <Engine>InnoDB</Engine>
     </table>
-    <column id="213" parent="206" name="id">
+    <table id="213" parent="6" name="role">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="214" parent="6" name="role_permission">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="215" parent="6" name="syslog">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="216" parent="6" name="user">
+      <Engine>InnoDB</Engine>
+    </table>
+    <table id="217" parent="6" name="user_role">
+      <Engine>InnoDB</Engine>
+    </table>
+    <column id="218" parent="206" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="214" parent="206" name="admin_name">
+    <column id="219" parent="206" name="admin_name">
       <Position>2</Position>
       <DataType>varchar(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="215" parent="206" name="admin_password">
+    <column id="220" parent="206" name="admin_password">
       <Position>3</Position>
       <DataType>varchar(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="216" parent="206" name="admin_phone">
+    <column id="221" parent="206" name="admin_phone">
       <Position>4</Position>
       <DataType>varchar(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="217" parent="206" name="PRIMARY">
+    <key id="222" parent="206" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="218" parent="207" name="id">
+    <column id="223" parent="207" name="id">
       <Position>1</Position>
       <Comment>购物车编号</Comment>
       <DataType>int(11)|0s</DataType>
@@ -869,54 +884,54 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="219" parent="207" name="u_id">
+    <column id="224" parent="207" name="u_id">
       <Position>2</Position>
       <Comment>用户编号</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="220" parent="207" name="com_id">
+    <column id="225" parent="207" name="com_id">
       <Position>3</Position>
       <Comment>商品编号</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="221" parent="207" name="num">
+    <column id="226" parent="207" name="num">
       <Position>4</Position>
       <Comment>商品数量</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="222" parent="207" name="cost">
+    <column id="227" parent="207" name="cost">
       <Position>5</Position>
       <Comment>总金额</Comment>
       <DataType>float|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="223" parent="207" name="cart_user">
+    <index id="228" parent="207" name="cart_user">
       <ColNames>u_id</ColNames>
     </index>
-    <index id="224" parent="207" name="cart_com">
+    <index id="229" parent="207" name="cart_com">
       <ColNames>com_id</ColNames>
     </index>
-    <key id="225" parent="207" name="PRIMARY">
+    <key id="230" parent="207" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="226" parent="207" name="cart_user">
+    <foreign-key id="231" parent="207" name="cart_user">
       <ColNames>u_id</ColNames>
       <RefSchemaName>shi_yi_min_sheng</RefSchemaName>
       <RefTableName>user</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="227" parent="207" name="cart_com">
+    <foreign-key id="232" parent="207" name="cart_com">
       <ColNames>com_id</ColNames>
       <RefSchemaName>shi_yi_min_sheng</RefSchemaName>
       <RefTableName>commodity</RefTableName>
       <RefColNames>c_id</RefColNames>
     </foreign-key>
-    <column id="228" parent="208" name="id">
+    <column id="233" parent="208" name="id">
       <Position>1</Position>
       <Comment>类型id</Comment>
       <DataType>int(11)|0s</DataType>
@@ -924,19 +939,19 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="229" parent="208" name="t_name">
+    <column id="234" parent="208" name="t_name">
       <Position>2</Position>
       <Comment>类型名称</Comment>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="230" parent="208" name="PRIMARY">
+    <key id="235" parent="208" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="231" parent="209" name="c_id">
+    <column id="236" parent="209" name="c_id">
       <Position>1</Position>
       <Comment>商品编号</Comment>
       <DataType>int(11)|0s</DataType>
@@ -944,51 +959,51 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="232" parent="209" name="c_name">
+    <column id="237" parent="209" name="c_name">
       <Position>2</Position>
       <Comment>商品名称</Comment>
       <DataType>varchar(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="233" parent="209" name="pic">
+    <column id="238" parent="209" name="pic">
       <Position>3</Position>
       <Comment>商品图片</Comment>
       <DataType>varchar(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="234" parent="209" name="price">
+    <column id="239" parent="209" name="price">
       <Position>4</Position>
       <Comment>商品单价</Comment>
       <DataType>float|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="235" parent="209" name="num">
+    <column id="240" parent="209" name="num">
       <Position>5</Position>
       <Comment>商品数量</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="236" parent="209" name="t_id">
+    <column id="241" parent="209" name="t_id">
       <Position>6</Position>
       <Comment>商品类型</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="237" parent="209" name="com_type">
+    <index id="242" parent="209" name="com_type">
       <ColNames>t_id</ColNames>
     </index>
-    <key id="238" parent="209" name="PRIMARY">
+    <key id="243" parent="209" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>c_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="239" parent="209" name="com_type">
+    <foreign-key id="244" parent="209" name="com_type">
       <ColNames>t_id</ColNames>
       <RefSchemaName>shi_yi_min_sheng</RefSchemaName>
       <RefTableName>com_type</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="240" parent="210" name="id">
+    <column id="245" parent="210" name="id">
       <Position>1</Position>
       <Comment>订单标号</Comment>
       <DataType>int(11)|0s</DataType>
@@ -996,25 +1011,25 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="241" parent="210" name="u_id">
+    <column id="246" parent="210" name="u_id">
       <Position>2</Position>
       <Comment>用户编号</Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="242" parent="210" name="u_name">
+    <column id="247" parent="210" name="u_name">
       <Position>3</Position>
       <Comment>收件人</Comment>
       <DataType>varchar(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="243" parent="210" name="u_addr">
+    <column id="248" parent="210" name="u_addr">
       <Position>4</Position>
       <Comment>收件地址</Comment>
       <DataType>varchar(60)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="244" parent="210" name="creat_time">
+    <column id="249" parent="210" name="creat_time">
       <Position>5</Position>
       <Comment>订单创建时间</Comment>
       <DataType>timestamp|0s</DataType>
@@ -1022,66 +1037,192 @@
       <ColumnKind>normal</ColumnKind>
       <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
     </column>
-    <column id="245" parent="210" name="cost">
+    <column id="250" parent="210" name="cost">
       <Position>6</Position>
       <Comment>总价</Comment>
       <DataType>float|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="246" parent="210" name="u_phone">
+    <column id="251" parent="210" name="u_phone">
       <Position>7</Position>
       <Comment>用户电话</Comment>
       <DataType>varchar(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="247" parent="210" name="order_user">
+    <index id="252" parent="210" name="order_user">
       <ColNames>u_id</ColNames>
     </index>
-    <key id="248" parent="210" name="PRIMARY">
+    <key id="253" parent="210" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="249" parent="210" name="order_user">
+    <foreign-key id="254" parent="210" name="order_user">
       <ColNames>u_id</ColNames>
       <RefSchemaName>shi_yi_min_sheng</RefSchemaName>
       <RefTableName>user</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="250" parent="211" name="order_id">
+    <column id="255" parent="211" name="order_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="251" parent="211" name="com_id">
+    <column id="256" parent="211" name="com_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="252" parent="211" name="order_com">
+    <index id="257" parent="211" name="order_com">
       <ColNames>com_id</ColNames>
     </index>
-    <key id="253" parent="211" name="PRIMARY">
+    <key id="258" parent="211" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>order_id
 com_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="254" parent="211" name="order_orders">
+    <foreign-key id="259" parent="211" name="order_orders">
       <ColNames>order_id</ColNames>
       <RefSchemaName>shi_yi_min_sheng</RefSchemaName>
       <RefTableName>orders</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="255" parent="211" name="order_com">
+    <foreign-key id="260" parent="211" name="order_com">
       <ColNames>com_id</ColNames>
       <RefSchemaName>shi_yi_min_sheng</RefSchemaName>
       <RefTableName>commodity</RefTableName>
       <RefColNames>c_id</RefColNames>
     </foreign-key>
-    <column id="256" parent="212" name="id">
+    <column id="261" parent="212" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="262" parent="212" name="permissionName">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="263" parent="212" name="url">
+      <Position>3</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="264" parent="212" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="265" parent="213" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="266" parent="213" name="roleName">
+      <Position>2</Position>
+      <Comment>角色名称</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="267" parent="213" name="roleDesc">
+      <Position>3</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="268" parent="213" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="269" parent="214" name="permissionId">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="270" parent="214" name="roleId">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="271" parent="214" name="role">
+      <ColNames>roleId</ColNames>
+    </index>
+    <key id="272" parent="214" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>permissionId
+roleId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="273" parent="214" name="permission">
+      <ColNames>permissionId</ColNames>
+      <RefSchemaName>shi_yi_min_sheng</RefSchemaName>
+      <RefTableName>permission</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="274" parent="214" name="role">
+      <ColNames>roleId</ColNames>
+      <RefSchemaName>shi_yi_min_sheng</RefSchemaName>
+      <RefTableName>role</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="275" parent="215" name="id">
+      <Position>1</Position>
+      <DataType>int(32)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="276" parent="215" name="visitTime">
+      <Position>2</Position>
+      <Comment>访问时间</Comment>
+      <DataType>timestamp|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
+    </column>
+    <column id="277" parent="215" name="userName">
+      <Position>3</Position>
+      <Comment>作者操用户名</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="278" parent="215" name="ip">
+      <Position>4</Position>
+      <Comment>问访IP</Comment>
+      <DataType>varchar(30)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="279" parent="215" name="url">
+      <Position>5</Position>
+      <Comment>问访资源url</Comment>
+      <DataType>varchar(50)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="280" parent="215" name="executionTime">
+      <Position>6</Position>
+      <Comment>执行时长</Comment>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="281" parent="215" name="method">
+      <Position>7</Position>
+      <Comment>访问方法</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="282" parent="215" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="283" parent="216" name="id">
       <Position>1</Position>
       <Comment>用户id</Comment>
       <DataType>int(11)|0s</DataType>
@@ -1089,53 +1230,86 @@ com_id</ColNames>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="257" parent="212" name="username">
+    <column id="284" parent="216" name="username">
       <Position>2</Position>
       <Comment>用户名</Comment>
       <DataType>varchar(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="258" parent="212" name="password">
+    <column id="285" parent="216" name="password">
       <Position>3</Position>
       <Comment>密码</Comment>
       <DataType>varchar(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="259" parent="212" name="phone">
+    <column id="286" parent="216" name="phone">
       <Position>4</Position>
       <Comment>电话</Comment>
       <DataType>varchar(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="260" parent="212" name="gender">
+    <column id="287" parent="216" name="gender">
       <Position>5</Position>
       <Comment>性别</Comment>
       <DataType>char(1)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="261" parent="212" name="email">
+    <column id="288" parent="216" name="email">
       <Position>6</Position>
       <Comment>邮箱</Comment>
       <DataType>varchar(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="262" parent="212" name="pic">
+    <column id="289" parent="216" name="pic">
       <Position>7</Position>
       <Comment>头像</Comment>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="263" parent="212" name="creat_time">
+    <column id="290" parent="216" name="creat_time">
       <Position>8</Position>
       <Comment>注册时间</Comment>
       <DataType>timestamp|0s</DataType>
       <ColumnKind>normal</ColumnKind>
       <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
     </column>
-    <key id="264" parent="212" name="PRIMARY">
+    <key id="291" parent="216" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+    <column id="292" parent="217" name="userId">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="293" parent="217" name="roleId">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="294" parent="217" name="roleId">
+      <ColNames>roleId</ColNames>
+    </index>
+    <key id="295" parent="217" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>userId
+roleId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="296" parent="217" name="user_role_ibfk_1">
+      <ColNames>userId</ColNames>
+      <RefSchemaName>shi_yi_min_sheng</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="297" parent="217" name="user_role_ibfk_2">
+      <ColNames>roleId</ColNames>
+      <RefSchemaName>shi_yi_min_sheng</RefSchemaName>
+      <RefTableName>role</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
   </database-model>
 </dataSource>

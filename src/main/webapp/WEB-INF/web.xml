@@ -56,9 +56,12 @@
   </filter-mapping>
 
 
-
+<!--配置监听器-->
   <listener>
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  <listener>
+    <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
   </listener>
 
   <!--2、 配置前端控制器：服务器启动必须加载，需要加载springmvc.xml配置文件 -->
