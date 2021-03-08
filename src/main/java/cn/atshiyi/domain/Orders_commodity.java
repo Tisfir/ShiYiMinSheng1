@@ -1,10 +1,12 @@
 package cn.atshiyi.domain;
 
+import java.io.Serializable;
+
 /**
  * @author L.N
  * @creat 2021-03-08-14:39
  */
-public class Orders_commodity {
+public class Orders_commodity implements Serializable {
     private Integer order_id;
     private Integer com_id;
 
