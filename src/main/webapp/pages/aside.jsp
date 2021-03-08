@@ -56,6 +56,12 @@
 							<i class="fa fa-circle-o"></i> 角色管理
 						</a>
 					</li>
+					<li id="system-setting">
+							<a href="/sysLog/findAll"> <i
+									class="fa fa-circle-o"></i> 访问日志
+							</a>
+
+					</li>
 
 				</ul>
 			</li>
